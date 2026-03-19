@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Admin = () => {
   return (
     <div  className='mx-10 flex min-h-screen border-3 rounded-2xl'>

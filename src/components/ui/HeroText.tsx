@@ -1,4 +1,3 @@
-import React from 'react'
 import TextType from './TextType'
 import ShinyText from './ShinyText'
 import { Disc3 } from 'lucide-react'
