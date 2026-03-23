@@ -1,7 +1,7 @@
 import type { OrderType } from '@/components/AuthProvider';
 import OrderCard from '@/components/OrderCard';
 import api from '@/lib/axio';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner';
 
 const Order = () => {
