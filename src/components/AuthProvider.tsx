@@ -50,7 +50,8 @@ export type OrderType = {
   orderId : string,
   orderItems : OrderItemType[],
   status: string,
-  phone : string
+  phone : string,
+  name? : string
 }
 
 export interface AuthContextType {

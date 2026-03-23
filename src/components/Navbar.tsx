@@ -78,7 +78,10 @@ const Navbar = ({setOverlap} : propType) : ReactElement => {
               }
               {
                 user.role == "ADMIN" &&
+                <>
+                <Button variant="default" className='font-bold h-10 rounded-xl' onClick={() => navigate("/v1")}>Shop Now</Button>
                 <Button variant="default" className='font-bold h-10 rounded-xl' onClick={() => navigate("/v1/admin")}>Dashboard</Button>
+                </>
               }
               <div className="relative">
                 <ShoppingBagIcon

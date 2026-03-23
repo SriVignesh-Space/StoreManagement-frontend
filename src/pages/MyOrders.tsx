@@ -21,7 +21,7 @@ const MyOrders = () => {
     <div className="text-redwood-200 flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold text-center">My Orders</h1>
       <div className="w-full max-w-xl flex justify-center items-center m-2">
-        <div className="flex w-full max-w-md flex-col gap-6">
+        <div className="flex w-full max-w-xl flex-col gap-6">
           <ItemGroup className="gap-4">
             {user.orders.length > 0  && user.orders.map((order) => (
               order.orderItems.map((product) => (
@@ -44,6 +44,7 @@ const MyOrders = () => {
                     </ItemTitle>
                     <ItemDescription>Language : {product.vinyl.language}</ItemDescription>
                     <ItemDescription>quantity : {product.quantity}</ItemDescription>
+                    <ItemDescription>Order Id : {order.orderId}</ItemDescription>
                   </ItemContent>
                   <ItemContent className="flex-none text-center">
                     <ItemDescription>{order.status}</ItemDescription>

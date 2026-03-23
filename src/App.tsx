@@ -10,8 +10,11 @@ import Cart from "./pages/Cart"
 import Profile from "./pages/Profile"
 import MyOrders from "./pages/MyOrders"
 import Checkout from "./pages/Checkout"
-import Admin from "./pages/Admin"
 import AdminProvider from "./components/AdminProvider"
+import AdminLayout from "./pages/AdminLayout"
+import Stock from "./pages/Stock"
+import Order from "./pages/Order"
+import AddVinyl from "./pages/AddVinyl"
 
 const App = () => {
   return (
@@ -27,12 +30,15 @@ const App = () => {
             <Route path="profile" element={<Profile />} />
             <Route path="myorders" element={<MyOrders/>} />
             <Route path="buy" element={<Checkout/>} />
-            <Route path="admin" element={
-              <AdminProvider>
-                <Admin/>
-              </AdminProvider>
-              } />
           </Route>
+            <Route path="/v1/admin" element={
+                <AdminProvider>
+                  <AdminLayout/>
+                </AdminProvider>}>
+                <Route index element={<Stock />}/>
+                <Route path="order" element={<Order />}/>
+                <Route path="addvinyl" element={<AddVinyl />}/>
+            </Route>
           <Route path="*" element={<ElementNotFound />} />
         </Routes>
       </AuthProvider>
