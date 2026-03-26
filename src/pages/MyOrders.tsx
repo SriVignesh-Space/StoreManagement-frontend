@@ -1,4 +1,5 @@
 import { AuthContext, type AuthContextType, type UserType } from "@/components/AuthProvider"
+import Slider from "@/components/Slider";
 import { Item, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 import convertImageUrl from "@/lib/imageConvert";
 import { useContext, useEffect } from "react"
@@ -47,7 +48,7 @@ const MyOrders = () => {
                     <ItemDescription>Order Id : {order.orderId}</ItemDescription>
                   </ItemContent>
                   <ItemContent className="flex-none text-center">
-                    <ItemDescription>{order.status}</ItemDescription>
+                     <Slider status={order.status} />
                   </ItemContent>
               </Item>
               ))
