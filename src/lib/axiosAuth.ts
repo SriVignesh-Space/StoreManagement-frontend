@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000/auth"
+const BASE_URL = `${import.meta.env.VITE_BASE_URL}auth`
 
 const apiAuth = axios.create({
     baseURL : BASE_URL,
