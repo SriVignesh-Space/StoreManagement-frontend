@@ -45,7 +45,7 @@ const Signin = () :ReactElement => {
       <main className="relative flex min-h-screen justify-center items-center">
       <Card className="w-full max-w-md" onClick={(e)=> e.stopPropagation()}>
       <CardHeader>
-      <CardTitle>Login to your acacount</CardTitle>
+      <CardTitle>Login to your account</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit}>
